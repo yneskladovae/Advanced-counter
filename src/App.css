@@ -40,7 +40,7 @@
 .count-err {
     font-size: 50px;
     /*letter-spacing: 10px;*/
-    color: red;
+    color: #f44e03;
 }
 
 .count-set {
@@ -59,7 +59,7 @@
 }
 
 .max-value {
-    color: red;
+    color: #f44e03;
     font-weight: bold;
 }
 
@@ -101,7 +101,7 @@
 }
 
 .err {
-    background: red;
+    background: #f44e03;
     color: white;
 }
 

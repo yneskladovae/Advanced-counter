@@ -24,12 +24,12 @@ export const CounterSettingTable: React.FC<CounterSettingTableType> = ({
             <div>
                 <div className="setting-table-item">
                     <label>max value:</label>
-                    <input className={styleForMaxValue} value={max}
+                    <input className={styleForMaxValue} value={(max).toString()}
                            onChange={maxInputValue} type={"number"}/>
                 </div>
                 <div className="setting-table-item">
                     <label>min value:</label>
-                    <input className={styleForStart} value={min}
+                    <input className={styleForStart} value={(min).toString()}
                            onChange={minInputValue} type={"number"}/>
                 </div>
             </div>

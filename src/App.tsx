@@ -4,8 +4,8 @@ import {CounterSetting} from "./components/CounterSetting/CounterSetting";
 import {Counter} from "./components/Counter/Counter";
 
 function App() {
-    const [min, setMin] = useState(0);
-    const [max, setMax] = useState(5);
+    let [min, setMin] = useState(0);
+    let [max, setMax] = useState(5);
     const [count, setCount] = useState(min);
     const [flag, setFlag] = useState(false);
     const incDisabled = count === max;

@@ -17,17 +17,19 @@ export const CounterSettingTable: React.FC<CounterSettingTableType> = ({
                                                                            minInputValue,
                                                                            maxInputValue
                                                                        }) => {
+    const styleForStart = `set-input ${styleForMinValueInput ? "err" : ""}`;
+    const styleForMaxValue = `set-input ${styleForMaxValueInput ? "err" : ""}`;
     return (
         <div className="counter-setting-table">
             <div>
                 <div className="setting-table-item">
                     <label>max value:</label>
-                    <input className={`set-input ${styleForMaxValueInput ? "err" : ""} `} value={max}
+                    <input className={styleForMaxValue} value={max}
                            onChange={maxInputValue} type={"number"}/>
                 </div>
                 <div className="setting-table-item">
                     <label>min value:</label>
-                    <input className={`set-input ${styleForMinValueInput ? "err" : ""} `} value={min}
+                    <input className={styleForStart} value={min}
                            onChange={minInputValue} type={"number"}/>
                 </div>
             </div>

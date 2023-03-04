@@ -70,6 +70,7 @@ function App() {
             <Counter
                 incDisabled={incDisabled}
                 resetDisabled={resetDisabled}
+                setDisabled={setDisabled}
                 incCounter={incCounter}
                 resetCounter={resetCounter}
                 maxValue={max}

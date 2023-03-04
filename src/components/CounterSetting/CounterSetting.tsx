@@ -30,6 +30,7 @@ export const CounterSetting: React.FC<CounterSettingPropsType> = ({
                                  styleForMaxValueInput={styleForMaxValueInput}
                                  maxInputValue={maxInputValue}
                                  minInputValue={minInputValue}
+
             />
             <CounterSettingButton setSetting={setSetting} setDisabled={setDisabled}
             />

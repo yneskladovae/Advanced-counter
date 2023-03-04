@@ -1,6 +1,7 @@
 .app-container {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
     position: absolute;
     margin: auto;
     top: 0;
@@ -8,13 +9,15 @@
     bottom: 0;
     left: 0;
     height: max-content;
+    zoom: 2;
 }
 
 .counter-container {
-    width: 300px;
+    width: 315px;
     border: 3px solid #ffffff;
     border-radius: 10px;
     text-align: center;
+    margin: 10px;
 }
 
 .counter-table, .counter-setting-table {
@@ -24,18 +27,19 @@
     padding: 25px;
     color: #f4df03;
     font-weight: bold;
+    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70px;
+    height: 75px;
 }
 
 .count-num {
     font-size: 50px;
 }
 .count-err {
-    font-size: 55px;
-    letter-spacing: 10px;
+    font-size: 50px;
+    /*letter-spacing: 10px;*/
     color: red;
 }
 
@@ -46,10 +50,12 @@
 .counter-btns, .counter-setting-btn {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     border: 3px solid #ffffff;
     margin: 10px;
     border-radius: 10px;
     padding: 15px 30px;
+    height: 50px;
 }
 
 .max-value {
@@ -97,4 +103,14 @@
 .err {
     background: red;
     color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .app-container {
+        zoom: 1;
+    }
+    .counter-container {
+        margin: 10px 0;
+        width: 300px;
+    }
 }

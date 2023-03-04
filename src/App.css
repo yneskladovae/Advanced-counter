@@ -1,0 +1,100 @@
+.app-container {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: max-content;
+}
+
+.counter-container {
+    width: 300px;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.counter-table, .counter-setting-table {
+    border: 3px solid #ffffff;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 25px;
+    color: #f4df03;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+}
+
+.count-num {
+    font-size: 50px;
+}
+.count-err {
+    font-size: 55px;
+    letter-spacing: 10px;
+    color: red;
+}
+
+.count-set {
+    font-size: 20px;
+}
+
+.counter-btns, .counter-setting-btn {
+    display: flex;
+    justify-content: space-evenly;
+    border: 3px solid #ffffff;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 15px 30px;
+}
+
+.max-value {
+    color: red;
+    font-weight: bold;
+}
+
+.counter-btns div button, .counter-setting-btn div button {
+    background: #f4df03;
+    border: none;
+    color: black;
+    padding: 10px 0px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    width: 95px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+*:disabled {
+    opacity: 0.5;
+}
+
+.setting-table-item input {
+    max-width: 90px;
+}
+
+.setting-table-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    min-width: 240px;
+}
+
+.set-input{
+    outline: none;
+    border: none;
+    /*text-align: center;*/
+    padding-left: 5px;
+    font-size: 18px;
+}
+
+.err {
+    background: red;
+    color: white;
+}

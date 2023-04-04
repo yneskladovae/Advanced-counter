@@ -51,12 +51,12 @@ export type SetSettingActionType = ReturnType<typeof setSettingAC>
 
 export const incCounterAC = () => {
     return {
-        type: "INCREMENT-COUNTER",
+        type: "INCREMENT-COUNTER"
     } as const
 }
 export const resetCounterAC = () => {
     return {
-        type: "RESET-COUNTER",
+        type: "RESET-COUNTER"
     } as const
 }
 export const maxInputValueAC = (value: number) => {
@@ -77,6 +77,6 @@ export const minInputValueAC = (value: number) => {
 }
 export const setSettingAC = () => {
     return {
-        type: "SET-SETTING",
+        type: "SET-SETTING"
     } as const
 }

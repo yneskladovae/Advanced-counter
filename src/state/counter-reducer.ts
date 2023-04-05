@@ -26,7 +26,7 @@ export const counterReducer = (state: StateType = initialState, action: ActionTy
             return {...state, max: state.max = action.payload.value, flag: state.flag = true}
         }
         case "MIN-INPUT-VALUE": {
-            return {...state, max: state.min = action.payload.value, flag: state.flag = true}
+            return {...state, min: state.min = action.payload.value, flag: state.flag = true}
         }
         case "SET-SETTING": {
             return {...state, count: state.count = state.min, flag: state.flag = false}

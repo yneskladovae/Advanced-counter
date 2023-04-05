@@ -5,9 +5,7 @@ import {CounterTable} from "./CounterTable/CounterTable";
 type CounterPropsType = {
     incDisabled: boolean
     resetDisabled: boolean
-    incCounter: () => void
-    resetCounter: () => void
-    maxValue: number
+    max: number
     count: number
     flag: boolean
     min: number
@@ -16,10 +14,8 @@ type CounterPropsType = {
 
 export const Counter: React.FC<CounterPropsType> = ({
                                                         incDisabled,
-                                                        resetCounter,
-                                                        incCounter,
                                                         resetDisabled,
-                                                        maxValue,
+                                                        max,
                                                         count,
                                                         flag,
                                                         min,
@@ -27,11 +23,9 @@ export const Counter: React.FC<CounterPropsType> = ({
                                                     }) => {
     return (
         <div className="counter-container">
-            <CounterTable count={count} maxValue={maxValue} flag={flag} min={min} setDisabled={setDisabled}/>
+            <CounterTable count={count} max={max} flag={flag} min={min} setDisabled={setDisabled}/>
             <CounterButtons
                 resetDisabled={resetDisabled}
-                incCounter={incCounter}
-                resetCounter={resetCounter}
                 incDisabled={incDisabled}
                 flag={flag}
             />

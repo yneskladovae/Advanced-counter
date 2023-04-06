@@ -21,8 +21,6 @@ function App() {
     const styleForMaxValueInput = state.max <= state.min || state.max <= 0;
     const styleForMinValueInput = state.min >= state.max || state.min < 0;
 
-    console.log(state.min >= state.max || state.min < 0 || state.max < 0)
-
     return (
         <div className="app-container">
             <CounterSetting

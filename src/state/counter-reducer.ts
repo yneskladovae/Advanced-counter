@@ -12,8 +12,6 @@ const initialState: StateType = {
     flag: false,
 };
 
-initialState.count = initialState.min;
-
 export const counterReducer = (state: StateType = initialState, action: ActionType): StateType => {
     switch (action.type) {
         case "INCREMENT-COUNTER": {

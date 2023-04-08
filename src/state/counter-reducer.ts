@@ -1,16 +1,18 @@
-export type StateType = {
-    min: number
-    max: number
-    count: number
-    flag: boolean
-}
+// export type StateType = {
+//     min: number
+//     max: number
+//     count: number
+//     flag: boolean
+// }
 
-const initialState: StateType = {
+const initialState = {
     min: 0,
     max: 5,
     count: 0,
     flag: false,
 };
+
+export type StateType = typeof initialState
 
 export const counterReducer = (state: StateType = initialState, action: ActionType): StateType => {
     switch (action.type) {

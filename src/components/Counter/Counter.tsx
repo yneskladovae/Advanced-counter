@@ -21,6 +21,7 @@ export const Counter: React.FC<CounterPropsType> = ({
                                                         min,
                                                         setDisabled
                                                     }) => {
+
     return (
         <div className="counter-container">
             <CounterTable count={count} max={max} flag={flag} min={min} setDisabled={setDisabled}/>

@@ -9,14 +9,14 @@ import {
     maxInputValueAC,
     minInputValueAC,
     resetCounterAC,
-    setSettingAC,
-    StateType
+    setSettingAC, StateType,
+    // StateType
 } from "./state/counter-reducer";
 
 function App() {
     const state = useSelector<AppRootState, StateType>(state => state.counter)
-    const incDisabled = state.count === state.max;
-    const resetDisabled = state.count === state.min;
+    const isIncDisabled = state.count === state.max;
+    const isResetDisabled = state.count === state.min;
     const setDisabled = state.min >= state.max || state.min < 0 || state.max < 0;
     const styleForMaxValueInput = state.max <= state.min || state.max <= 0;
     const styleForMinValueInput = state.min >= state.max || state.min < 0;
@@ -31,8 +31,8 @@ function App() {
                 styleForMinValueInput={styleForMinValueInput}
             />
             <Counter
-                incDisabled={incDisabled}
-                resetDisabled={resetDisabled}
+                incDisabled={isIncDisabled}
+                resetDisabled={isResetDisabled}
                 setDisabled={setDisabled}
                 max={state.max}
                 count={state.count}

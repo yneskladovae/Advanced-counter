@@ -1,10 +1,3 @@
-// export type StateType = {
-//     min: number
-//     max: number
-//     count: number
-//     flag: boolean
-// }
-
 const initialState = {
     min: 0,
     max: 5,

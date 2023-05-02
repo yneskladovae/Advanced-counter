@@ -1,25 +1,17 @@
-import React, {ChangeEvent, useState} from 'react';
-import {maxInputValueAC, minInputValueAC, setSettingAC, StateType} from "../../../state/counter-reducer";
-import {useDispatch, useSelector} from "react-redux";
-import {AppRootState} from "../../../state/store";
+import React, {ChangeEvent, FC} from 'react';
+import {maxInputValueAC, minInputValueAC} from "../../../state/counter-reducer";
+import {useDispatch} from "react-redux";
+import {useAppSelector} from "../../../hooks/useAppSelector";
 
-type CounterSettingTableType = {
-    min: number
-    max: number
-    styleForMinValueInput: boolean
-    styleForMaxValueInput: boolean
-}
+type CounterSettingTableType = {}
 
-export const CounterSettingTable: React.FC<CounterSettingTableType> = ({
-                                                                           min,
-                                                                           max,
-                                                                           styleForMinValueInput,
-                                                                           styleForMaxValueInput,
-                                                                       }) => {
+export const CounterSettingTable: FC<CounterSettingTableType> = ({}) => {
+    const state = useAppSelector(state => state.counter)
+    const dispatch = useDispatch()
+    const styleForMaxValueInput = state.max <= state.min || state.max <= 0;
+    const styleForMinValueInput = state.min >= state.max || state.min < 0;
     const styleForStart = `set-input ${styleForMinValueInput ? "err" : ""}`;
     const styleForMaxValue = `set-input ${styleForMaxValueInput ? "err" : ""}`;
-
-    const dispatch = useDispatch()
 
     const maxInputValueHandler = (e: ChangeEvent<HTMLInputElement>) => {
         dispatch(maxInputValueAC(+e.currentTarget.value));
@@ -34,12 +26,12 @@ export const CounterSettingTable: React.FC<CounterSettingTableType> = ({
             <div>
                 <div className="setting-table-item">
                     <label>max value:</label>
-                    <input className={styleForMaxValue} value={(max).toString()}
+                    <input className={styleForMaxValue} value={(state.max).toString()}
                            onChange={maxInputValueHandler} type={"number"}/>
                 </div>
                 <div className="setting-table-item">
                     <label>min value:</label>
-                    <input className={styleForStart} value={(min).toString()}
+                    <input className={styleForStart} value={(state.min).toString()}
                            onChange={minInputValueHandler} type={"number"}/>
                 </div>
             </div>

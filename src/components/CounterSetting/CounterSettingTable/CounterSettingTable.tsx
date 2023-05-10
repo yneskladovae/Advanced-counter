@@ -1,5 +1,5 @@
 import React, {ChangeEvent, FC} from 'react';
-import {maxInputValueAC, minInputValueAC} from "../../../state/counter-reducer";
+import {maxInputValueAC, minInputValueAC} from "../../../bll/counter-reducer";
 import {useDispatch} from "react-redux";
 import {useAppSelector} from "../../../hooks/useAppSelector";
 

@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {SuperButton} from "../../SuperButton/SuperButton";
-import {incCounterAC, resetCounterAC} from "../../../state/counter-reducer";
+import {incCounterAC, resetCounterAC} from "../../../bll/counter-reducer";
 import {useDispatch} from "react-redux";
 import {useAppSelector} from "../../../hooks/useAppSelector";
 

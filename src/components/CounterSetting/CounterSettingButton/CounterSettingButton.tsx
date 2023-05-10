@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {SuperButton} from "../../SuperButton/SuperButton";
 import {useDispatch} from "react-redux";
-import {setSettingAC} from "../../../state/counter-reducer";
+import {setSettingAC} from "../../../bll/counter-reducer";
 import {useAppSelector} from "../../../hooks/useAppSelector";
 
 type CounterSettingButtonType = {}
